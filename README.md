@@ -28,7 +28,7 @@ This project identifies "outlier" drugs in the Medicare Part D program—pharmac
 
 ### 3. Machine Learning Model
 * **Task:** Time Series Forecasting followed by Statistical Outlier Detection.
-* **Algorithm:** Linear Regression (applied to each unique drug-manufacturer group).
+* **Algorithm:** Polynomial Regression (applied to each unique drug-manufacturer group).
 * **Evaluation:** * **R² Score:** 0.9551 (Validation set), showing a strong linear trend in aggregate market momentum.
     * **Constraint Handling:** Post-processing to ensure non-negative spending forecasts and handling division-by-zero errors.
 
@@ -41,7 +41,7 @@ I applied a **Z-Score analysis** on the predicted 2026 spending rates.
 
 ## 📈 Key Insights & Reflections
 * **Model Underfitting:** While aggregate accuracy was high, individual drug groups showed a median R² of 0.67, suggesting that while linear trends exist, some drugs follow non-linear growth.
-* **Future Work:** Moving from Linear Regression to **Exponential Smoothing** to better handle short (5-year) time-series data with limited historical points.
+* **Future Work:** Moving from Polynomial Regression to **Exponential Smoothing** to better handle short (5-year) time-series data with limited historical points.
 * **Ethics:** Outlier flags are intended as **triggers for investigation**, not a final judgment of guilt, to avoid unfair regulatory pressure on manufacturers.
 
 ---
